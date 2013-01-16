@@ -1,0 +1,164 @@
+//Definitions
+
+@section-job-color: #bf003f;
+@section-skill-color: #2131bf;
+@section-education-color: #54bf00;
+@section-language-color: #bf8c00;
+@section-opensource-color: #03a6bf;
+@section-interest-color: #b8bf00;
+
+@section-background-percent: 10%;
+@section-after-percent: 15%;
+
+@rounded-corner-radius: 5px;
+
+@box-shadow-radius: 20px;
+@box-shadow-opacity: 0.1;
+
+@text-shadow-radius: 2px;
+@text-shadow-opacity: 0.5;
+
+//Mixins
+
+.rounded-corners(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.box-shadow(@radius) {
+  -webkit-box-shadow: 0 0 @radius rgba(0, 0, 0, @box-shadow-opacity);
+  -moz-box-shadow: 0 0 @radius rgba(0, 0, 0, @box-shadow-opacity);
+  box-shadow: 0 0 @radius rgba(0, 0, 0, @box-shadow-opacity);
+}
+
+.text-shadow(@radius) {
+  -webkit-text-shadow: @radius @radius 0 rgba(0, 0, 0, @text-shadow-opacity);
+  -moz-text-shadow: @radius @radius 0 rgba(0, 0, 0, @text-shadow-opacity);
+  text-shadow: @radius @radius 0 rgba(0, 0, 0, @text-shadow-opacity);
+}
+
+.general-section(@color) {
+  position: relative;
+  margin-right: -51px;
+  background-color: @color;
+  background: @color;
+  background: -moz-linear-gradient(top, @color 0%, darken(@color, @section-background-percent) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @color), color-stop(100%, darken(@color, @section-background-percent)));
+  background: -webkit-linear-gradient(top, @color 0%, darken(@color, @section-background-percent) 100%);
+  background: -o-linear-gradient(top, @color 0%, darken(@color, @section-background-percent) 100%);
+  background: -ms-linear-gradient(top, @color 0%, darken(@color, @section-background-percent) 100%);
+  background: linear-gradient(to bottom, @color 0%, darken(@color, @section-background-percent) 100%);
+  &:after {
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    content: "";
+    border-right: 30px solid transparent;
+    border-top: 30px solid darken(@color, @section-after-percent);
+  }
+}
+
+// Classes
+
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: url('../img/dark.png') top left repeat;
+}
+
+.container {
+  .rounded-corners(@rounded-corner-radius);
+  .box-shadow(@box-shadow-radius);
+  background: white;
+  border: 1px solid #dddddd;
+  padding: 20px;
+}
+
+.mainbar {
+}
+
+.section {
+  h3 {
+    .text-shadow(@text-shadow-radius);
+    position: relative;
+    color: white;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    i {
+      padding-right: 15px;
+    }
+  }
+}
+
+.section-job {
+  .general-section(@section-job-color);
+}
+
+.section-skill {
+  .general-section(@section-skill-color);
+}
+
+.section-education {
+  .general-section(@section-education-color);
+}
+
+.section-language {
+  .general-section(@section-language-color);
+}
+
+.section-opensource {
+  .general-section(@section-opensource-color);
+}
+
+.section-interest {
+  .general-section(@section-interest-color);
+}
+
+//Responsive
+
+//Desktop large
+
+@media (min-width: 1200px) {
+  .sidebar-content {
+    width: 258px;
+  }
+}
+
+//Desktop
+
+@media (max-width: 980px) {
+  .sidebar-content {
+    width: 218px;
+  }
+}
+
+//Tablet to desktop
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .sidebar-content {
+    width: 166px;
+  }
+}
+
+//Tablet
+
+@media (max-width: 767px) {
+  .sidebar-content {
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-content.affix {
+    position: static;
+    width: auto;
+    top: 0;
+  }
+}
+
+//Landscape phones
+
+@media (max-width: 480px) {
+}

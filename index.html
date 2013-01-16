@@ -1,8 +1,138 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Temporary Page</title>
+    <title>CV</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
 </head>
-<body>
-Temporary Page
+<body data-spy="scroll" data-target="sidebar">
+<div class="container">
+    <div id="content"></div>
+    <div class="row">
+        <div class="span12 pagination-centered">
+            <a href="#encrypt-modal" data-toggle="modal">π</a>
+        </div>
+    </div>
+</div>
+<div id="decrypt-modal" class="modal hide" data-backdrop="static">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>Decrypt text</h3>
+    </div>
+    <div class="modal-body">
+        <form id="decrypt-form">
+            <div id="decrypt-form-control" class="control-group">
+                <label for="decrypt-form-key">Key</label><input type="password" id="decrypt-form-key" class="input-block-level">
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">Close</a>
+        <a id="decrypt" href="#" class="btn btn-primary">Decrypt</a>
+    </div>
+</div>
+<div id="encrypt-modal" class="modal hide" data-backdrop="static">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>Encrypt text</h3>
+    </div>
+    <div class="modal-body">
+        <form id="encrypt-form">
+            <label for="encrypt-form-key">Key</label><input type="password" id="encrypt-form-key" class="input-block-level">
+            <label for="encrypt-form-input">Plaintext</label><textarea id="encrypt-form-input" rows="5" class="input-block-level"></textarea>
+            <label for="encrypt-form-output">Result</label><textarea id="encrypt-form-output" rows="5" class="input-block-level"></textarea>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">Close</a>
+        <a id="encrypt" href="#" class="btn btn-primary">Encrypt</a>
+    </div>
+</div>
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/aes.min.js"></script>
+<script type="text/javascript" src="assets/js/handlebars.min.js"></script>
+<script type="text/javascript" src="assets/js/me-fr.min.js"></script>
+<script type="text/javascript" src="assets/js/me-en.min.js"></script>
+<script type="text/javascript" src="assets/js/resume.min.js"></script>
+<script type="text/javascript">
+    function display(me) {
+        $('#content').html(Handlebars.templates.resume(me));
+        $('.obfuscated').each(function (index, value) {
+            var node = $(value);
+            var text = node.text();
+            var newText = '';
+            var max = node.attr('data-trim');
+            if (max === '') {
+                max = text.length;
+            }
+            for (var i = 0; i < max; i++) {
+                newText += '×';
+            }
+            node.attr('data-old-text', text);
+            node.text(newText);
+        });
+        $('#language-french').on('click', function () {
+            display(_meFr);
+            return false;
+        });
+        $('#language-english').on('click', function () {
+            display(_meEn);
+            return false;
+        });
+    }
+    $(document).ready(function () {
+        display(_meFr);
+        $('#decrypt-modal').on('shown', function () {
+            $('#decrypt-form-key').focus();
+        });
+        $('#encrypt-modal').on('shown', function () {
+            $('#encrypt-form-key').focus();
+        });
+        $('#decrypt').on('click', function () {
+            var node = $('#decrypt-form-key');
+            var key = node.val();
+            var succeeded = false;
+            $('.encrypted').each(function (index, value) {
+                var node = $(value);
+                var text;
+                if (node.hasClass('obfuscated')) {
+                    text = node.attr('data-old-text');
+                } else {
+                    text = node.text()
+                }
+                var decrypted = CryptoJS.AES.decrypt(text, key);
+                var string = decrypted.toString(CryptoJS.enc.Utf8);
+                if (string !== '') {
+                    succeeded = true;
+                    node.text(string);
+                }
+            });
+            if (succeeded) {
+                $('#decrypt-form-control').removeClass('error');
+                $('#decrypt-modal').modal('hide');
+            } else {
+                node.val('');
+                $('#decrypt-form-control').addClass('error');
+            }
+            return false;
+        });
+        $('#decrypt-form').on('submit', function () {
+            $('.decrypt').click();
+            return false;
+        });
+        $('#encrypt').on('click', function () {
+            var key = $('#encrypt-form-key').val();
+            var message = $('#encrypt-form-input').val();
+            var encrypted = CryptoJS.AES.encrypt(message, key);
+            $('#encrypt-form-output').val(encrypted);
+            return false;
+        });
+    });
+</script>
 </body>
 </html>

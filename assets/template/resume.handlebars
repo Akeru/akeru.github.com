@@ -1,0 +1,114 @@
+<div class="row">
+    <div class="span3 sidebar">
+        <div class="sidebar-content affix">
+            <ul class="unstyled">
+                <li>
+                    <h2>{{bio.name}}</h2>
+                </li>
+                <li>
+                    <b>{{profile.name}}</b><br/>
+                    <small>{{profile.tag}}</small>
+                </li>
+                <li>
+                    <h5>{{section.contact}}</h5>
+                    <i class="icon-tablet"></i><span class="text-info"><span class="obfuscated encrypted" data-trim="22">{{contact.phone}}</span></span><br/>
+                    <i class="icon-envelope"></i><span class="text-info"><span class="obfuscated encrypted" data-trim="22">{{contact.email}}</span></span><br/>
+                    <i class="icon-map-marker"></i><span class="text-info"><span class="obfuscated encrypted" data-trim="22">{{contact.location}}</span></span><br/>
+                </li>
+                <li>
+                    <h5>{{section.misc}}</h5>
+                    <i class="icon-check-empty"></i><span class="text-info">{{bio.nationalty}}</span><br/>
+                    <i class="icon-check-empty"></i><span class="text-info">{{bio.birthdate.name}}<span class="obfuscated encrypted" data-trim="17">{{bio.birthdate.date}}</span></span><br/>
+                    <i class="icon-check-empty"></i><span class="text-info">{{bio.marital}}</span><br/>
+                    <i class="icon-check-empty"></i><span class="text-info">{{bio.car}}</span><br/>
+                </li>
+                <li class="btn-toolbar">
+                    <div class="btn-group">
+                        <a class="btn btn-large top-buttons" href="#"><i class="icon-print"></i></a>
+                        <a class="btn btn-large top-buttons" href="#"><i class="icon-download"></i></a>
+                        <a class="btn btn-large top-buttons" href="#decrypt-modal" data-toggle="modal"><i class="icon-cogs"></i></a>
+                        <a class="btn btn-large top-buttons dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-flag"></i> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a id="language-french" href="#">Français</a></li>
+                            <li><a id="language-english" href="#">English</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="span9">
+        <div class="mainbar">
+            <div class="section">
+                <div class="section-job"><h3><i class="icon-briefcase"></i>{{section.job}}</h3></div>
+                {{#jobs}}
+                    <div class="row">
+                        <div class="span7">
+                            <b>{{title}}</b><br/>
+                            <a href="{{company.url}}">{{company.name}}</a><br/>
+                            {{startdate.month}} {{startdate.year}} &mdash; {{enddate.month}} {{enddate.year}} <br/>
+                        </div>
+                        <div class="span2 pagination-centered">
+                            <img src="assets/img/{{company.logo}}.png">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span9">
+                            &nbsp;
+                        </div>
+                    </div>
+                {{/jobs}}
+            </div>
+            <div class="section">
+                <div class="section-skill"><h3><i class="icon-dashboard"></i>{{section.skill}}</h3></div>
+                <div class="row">
+                    {{#skills}}
+                        <div class="span3">
+                            <b>{{name}}</b><br/>
+                            {{#entries}}
+                                {{name}}<br/>
+                            {{/entries}}
+                        </div>
+                    {{/skills}}
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-education"><h3><i class="icon-book"></i>{{section.education}}</h3></div>
+                {{#educations}}
+                    <div class="row">
+                        <div class="span7">{{name}}</div>
+                        <div class="span2">{{startdate.year}} &mdash; {{enddate.year}}</div>
+                    </div>
+                {{/educations}}
+            </div>
+            <div class="section">
+                <div class="section-language"><h3><i class="icon-flag"></i>{{section.language}}</h3></div>
+                {{#languages}}
+                    <div class="row">
+                        <div class="span2">{{name}}</div>
+                        <div class="span7">{{level}}</div>
+                    </div>
+                {{/languages}}
+            </div>
+            <div class="section">
+                <div class="section-opensource"><h3><i class="icon-github-alt"></i>{{section.opensource}}</h3></div>
+                <p>{{opensources.title}}</p>
+                {{#opensources.entries}}
+                    <div class="row">
+                        <div class="span2"><a href="{{url}}">{{name}}</a></div>
+                        <div class="span7">{{activity}}</div>
+                    </div>
+                {{/opensources.entries}}
+            </div>
+            <div class="section">
+                <div class="section-interest"><h3><i class="icon-beer"></i>{{section.interest}}</h3></div>
+                {{#interests}}
+                    <div class="row">
+                        <div class="span2">{{name}}</div>
+                        <div class="span7">{{description}}</div>
+                    </div>
+                {{/interests}}
+            </div>
+        </div>
+    </div>
+</div>
