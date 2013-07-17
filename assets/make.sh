@@ -1,7 +1,7 @@
 #!/bin/sh
 #handlebars template/resume.handlebars -f js/resume.min.js
-#lessc css/style.less css/style.min.css
 handlebars template/resume.handlebars -f js/resume.min.js -m
+#lessc css/style.less css/style.min.css
 lessc --yui-compress css/style.less css/style.min.css
 uglifyjs js/handlebars.runtime.js -o js/handlebars.runtime.min.js
 uglifyjs js/me-fr.js -o js/me-fr.min.js

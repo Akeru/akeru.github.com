@@ -61,6 +61,13 @@
   }
 }
 
+.print-section(@color) {
+  margin-right: 0;
+  &:after {
+    content: initial;
+  }
+}
+
 // Classes
 
 body {
@@ -161,4 +168,53 @@ body {
 //Landscape phones
 
 @media (max-width: 480px) {
+}
+
+// Printing
+
+@media print {
+
+  body {
+    font-size: 12px;
+  }
+
+  .container {
+    .rounded-corners(0);
+    .box-shadow(0);
+    background: white;
+    border: 0;
+    padding: 0;
+  }
+
+  .section-job {
+    .print-section(@section-job-color);
+  }
+
+  .section-skill {
+    .print-section(@section-skill-color);
+  }
+
+  .section-education {
+    .print-section(@section-education-color);
+  }
+
+  .section-language {
+    .print-section(@section-language-color);
+  }
+
+  .section-opensource {
+    .print-section(@section-opensource-color);
+  }
+
+  .section-interest {
+    .print-section(@section-interest-color);
+  }
+
+  .section h3 {
+    padding-left: 0;
+  }
+
+  .hidden-print {
+    display: none !important;
+  }
 }
