@@ -77,7 +77,7 @@ var _meFr = {
         {
             "title": "Administrateur systèmes",
             "company": {
-                "name": "ULg",
+                "name": "ULg - Institut Montefiore",
                 "url": "http://www.montefiore.ulg.ac.be",
                 "logo": "ulg"
             },

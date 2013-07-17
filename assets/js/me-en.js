@@ -34,7 +34,7 @@ var _meEn = {
             "title": "Network engineer",
             "company": {
                 "name": "SEGI",
-                "url": "http://ulg.be",
+                "url": "http://www.ulg.ac.be/segi",
                 "logo": "segi"
             },
             "startdate": {
@@ -77,7 +77,7 @@ var _meEn = {
         {
             "title": "System engineer",
             "company": {
-                "name": "ULg",
+                "name": "ULg - Montefiore Institute",
                 "url": "http://www.montefiore.ulg.ac.be",
                 "logo": "ulg"
             },
@@ -298,7 +298,7 @@ var _meEn = {
             "description": ""
         },
         {
-            "name": "Tabletop role playing games",
+            "name": "Tabletop RPGs",
             "description": ""
         }
     ]
