@@ -1,206 +1,217 @@
 <div class="row">
-<div class="span3">
-	<div class="sidebar-content affix">
-		<div class="row-fluid">
-			<div class="span10">
-				<h2>{{bio.name}}</h2>
-			</div>
-			<div class="span2 hidden-print">
-				<div class="btn-toolbar">
-					<div class="btn-group">
-						<button class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i>
-							<span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu">
-							<li><a id="language-french" href="#">Français</a></li>
-							<li><a id="language-english" href="#">English</a></li>
-							<li><a href="#">Download</a></li>
-							<li><a href="#decrypt-modal" data-toggle="modal">Reveal</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+    <div class="span3">
+        <div class="sidebar-content">
+            <div class="row-fluid">
+                <div class="span10">
+                    <h2>{{bio.name}}</h2>
+                </div>
+                <div class="span2 hidden-print">
+                    <div class="btn-toolbar">
+                        <div class="btn-group">
+                            <button class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a id="language-french" href="#">Français</a></li>
+                                <li><a id="language-english" href="#">English</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-		<div class="row-fluid">
-			<div class="span12">
-				<strong>{{profile.name}}</strong>
-			</div>
-		</div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <strong>{{profile.name}}</strong>
+                </div>
+            </div>
 
-		<div class="row-fluid">
-			<div class="span12">
-                {{profile.tag}}
-			</div>
-		</div>
+            <div class="row-fluid">
+                <div class="span12">
+                    {{profile.tag}}
+                </div>
+            </div>
 
-		<div class="row-fluid">
-			<div class="span12">
-				<strong>{{section.contact}}</strong>
-			</div>
-		</div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <strong>{{section.contact}}</strong>
+                </div>
+            </div>
 
-		<div class="row-fluid">
-			<div class="span1">
-				<i class="fa fa-mobile-phone fa-fw"></i>
-			</div>
-			<div class="span11">
-				<span class="obfuscated encrypted" data-trim="22">{{contact.phone}}</span>
-			</div>
-		</div>
+            <div class="row-fluid">
+                <div class="span1">
+                    <i class="fa fa-mobile-phone fa-fw"></i>
+                </div>
+                <div class="span11">
+                    <span class="obfuscated encrypted" data-trim="22">{{contact.phone}}</span>
+                </div>
+            </div>
 
-		<div class="row-fluid">
-			<div class="span1">
-				<i class="fa fa-envelope fa-fw"></i>
-			</div>
-			<div class="span11">
-				<span class="obfuscated encrypted" data-trim="22">{{contact.email}}</span>
-			</div>
-		</div>
+            <div class="row-fluid">
+                <div class="span1">
+                    <i class="fa fa-envelope fa-fw"></i>
+                </div>
+                <div class="span11">
+                    <span class="obfuscated encrypted" data-trim="22">{{contact.email}}</span>
+                </div>
+            </div>
 
-		<div class="row-fluid">
-			<div class="span1">
-				<i class="fa fa-map-marker fa-fw"></i>
-			</div>
-			<div class="span11">
-				<span class="obfuscated encrypted" data-trim="22">{{contact.location}}</span>
-			</div>
-		</div>
+            <div class="row-fluid">
+                <div class="span1">
+                    <i class="fa fa-map-marker fa-fw"></i>
+                </div>
+                <div class="span11">
+                    <span class="obfuscated encrypted" data-trim="22">{{contact.location}}</span>
+                </div>
+            </div>
 
-		<div class="row-fluid">
-			<div class="span12">
-				<strong>{{section.misc}}</strong>
-			</div>
-		</div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <strong>{{section.misc}}</strong>
+                </div>
+            </div>
 
-		<div class="row-fluid">
-			<div class="span1">
-				<i class="fa fa-flag-o fa-fw"></i>
-			</div>
-			<div class="span11">
-                {{bio.nationalty}}
-			</div>
-		</div>
+            <div class="row-fluid">
+                <div class="span1">
+                    <i class="fa fa-flag-o fa-fw"></i>
+                </div>
+                <div class="span11">
+                    {{bio.nationalty}}
+                </div>
+            </div>
 
-		<div class="row-fluid">
-			<div class="span1">
-				<i class="fa fa-gift fa-fw"></i>
-			</div>
-			<div class="span11">
-                {{bio.birthdate.name}}
-				<span class="obfuscated encrypted" data-trim="15">{{bio.birthdate.date}}</span>
-			</div>
-		</div>
+            <div class="row-fluid">
+                <div class="span1">
+                    <i class="fa fa-gift fa-fw"></i>
+                </div>
+                <div class="span11">
+                    {{bio.birthdate.name}}
+                    <span class="obfuscated encrypted" data-trim="15">{{bio.birthdate.date}}</span>
+                </div>
+            </div>
 
-		<div class="row-fluid">
-			<div class="span1">
-				<i class="fa fa-female fa-fw"></i>
-			</div>
-			<div class="span11">
-                {{bio.marital}}
-			</div>
-		</div>
+            <div class="row-fluid">
+                <div class="span1">
+                    <i class="fa fa-female fa-fw"></i>
+                </div>
+                <div class="span11">
+                    {{bio.marital}}
+                </div>
+            </div>
 
-		<div class="row-fluid">
-			<div class="span1">
-				<i class="fa fa-truck fa-fw"></i>
-			</div>
-			<div class="span11">
-                {{bio.car}}
-			</div>
-		</div>
+            <div class="row-fluid">
+                <div class="span1">
+                    <i class="fa fa-truck fa-fw"></i>
+                </div>
+                <div class="span11">
+                    {{bio.car}}
+                </div>
+            </div>
 
-		<div class="row-fluid hidden-print">
-			<div class="span1">
-				<i class="fa fa-linkedin fa-fw"></i>
-			</div>
-			<div class="span11">
-				<a href='http://linkedin.com/in/axelbodart'>axel.bodart</a>
-			</div>
-		</div>
+            <div class="row-fluid hidden-print">
+                <div class="span1">
+                    <i class="fa fa-linkedin fa-fw"></i>
+                </div>
+                <div class="span11">
+                    <a href='http://linkedin.com/in/axelbodart'>axel.bodart</a>
+                </div>
+            </div>
 
-		<div class="row-fluid hidden-print">
-			<div class="span1">
-				<i class="fa fa-github fa-fw"></i>
-			</div>
-			<div class="span11">
-				<a href='http://github.com/akeru'>akeru</a>
-			</div>
-		</div>
+            <div class="row-fluid hidden-print">
+                <div class="span1">
+                    <i class="fa fa-github fa-fw"></i>
+                </div>
+                <div class="span11">
+                    <a href='http://github.com/akeru'>akeru</a>
+                </div>
+            </div>
 
-	</div>
+        </div>
+    </div>
+    <div class="span9">
+        <div class="mainbar">
+            <div class="section">
+                <div class="section-job"><h3><i class="fa fa-briefcase"></i>{{section.job}}</h3></div>
+                {{#jobs}}
+                    <div class="row">
+                        <div class="span2">
+                            {{startdate.month}} {{startdate.year}} &mdash; {{enddate.month}} {{enddate.year}} <br/>
+                        </div>
+                        <div class="span2">
+                            <b>{{title}}</b>
+                        </div>
+                        <div class="span5 pagination-right text-info">
+                            {{company.name}}
+                        </div>
+                    </div>
+                    {{#projects}}
+                        <div class="row">
+                            <div class="span2">
+                                <u>{{name}}</u>
+                            </div>
+                            <div class="span7">
+                                {{description}}
+                            </div>
+                        </div>
+                    {{/projects}}
+                    {{#unless @last}}
+                        <div class="row">
+                            <div class="span9">
+                                &nbsp;
+                            </div>
+                        </div>
+                    {{/unless}}
+                {{/jobs}}
+            </div>
+            <div class="section">
+                <div class="section-skill"><h3><i class="fa fa-dashboard"></i>{{section.skill}}</h3></div>
+                <div class="row">
+                    {{#skills}}
+                        <div class="span3">
+                            <b>{{name}}</b><br/>
+                            {{#entries}}
+                                {{name}}<br/>
+                            {{/entries}}
+                        </div>
+                    {{/skills}}
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-education"><h3><i class="fa fa-book"></i>{{section.education}}</h3></div>
+                {{#educations}}
+                    <div class="row">
+                        <div class="span7">{{name}}</div>
+                        <div class="span2">{{startdate.year}} &mdash; {{enddate.year}}</div>
+                    </div>
+                {{/educations}}
+            </div>
+            <div class="section">
+                <div class="section-language"><h3><i class="fa fa-flag"></i>{{section.language}}</h3></div>
+                <div class="row">
+                    {{#languages}}
+                        <div class="span2 text-info">{{name}}</div>
+                        <div class="span2">{{description}}</div>
+                    {{/languages}}
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-development"><h3><i class="fa fa-github-alt"></i>{{section.development}}</h3></div>
+                {{#development.entries}}
+                    <div class="row">
+                        <div class="span2">{{name}}</div>
+                        <div class="span7">{{description}}</div>
+                    </div>
+                {{/development.entries}}
+            </div>
+            <div class="section">
+                <div class="section-interest"><h3><i class="fa fa-beer"></i>{{section.interest}}</h3></div>
+                {{#interests}}
+                    <div class="row">
+                        <div class="span3">{{name}}</div>
+                        <div class="span6">{{description}}</div>
+                    </div>
+                {{/interests}}
+            </div>
+        </div>
+    </div>
 </div>
-<div class="span9">
-	<div class="mainbar">
-		<div class="section">
-			<div class="section-job"><h3><i class="fa fa-briefcase"></i>{{section.job}}</h3></div>
-            {{#jobs}}
-				<div class="row">
-					<div class="span7">
-						<b>{{title}}</b><br/> <a href="{{company.url}}">{{company.name}}</a><br/>
-                        {{startdate.month}} {{startdate.year}} &mdash; {{enddate.month}} {{enddate.year}} <br/>
-					</div>
-					<div class="span2 pagination-centered">
-						<img src="assets/img/{{company.logo}}.png">
-					</div>
-				</div>
-				<div class="row">
-					<div class="span9">
-						&nbsp;
-					</div>
-				</div>
-            {{/jobs}}
-		</div>
-		<div class="section">
-			<div class="section-skill"><h3><i class="fa fa-dashboard"></i>{{section.skill}}</h3></div>
-			<div class="row">
-                {{#skills}}
-					<div class="span3">
-						<b>{{name}}</b><br/>
-                        {{#entries}}
-                            {{name}}<br/>
-                        {{/entries}}
-					</div>
-                {{/skills}}
-			</div>
-		</div>
-		<div class="section">
-			<div class="section-education"><h3><i class="fa fa-book"></i>{{section.education}}</h3></div>
-            {{#educations}}
-				<div class="row">
-					<div class="span7">{{name}}</div>
-					<div class="span2">{{startdate.year}} &mdash; {{enddate.year}}</div>
-				</div>
-            {{/educations}}
-		</div>
-		<div class="section">
-			<div class="section-language"><h3><i class="fa fa-flag"></i>{{section.language}}</h3></div>
-            {{#languages}}
-				<div class="row">
-					<div class="span2">{{name}}</div>
-					<div class="span7">{{level}}</div>
-				</div>
-            {{/languages}}
-		</div>
-		<div class="section">
-			<div class="section-opensource"><h3><i class="fa fa-github-alt"></i>{{section.opensource}}</h3></div>
-			<p>{{opensources.title}}</p>
-            {{#opensources.entries}}
-				<div class="row">
-					<div class="span2"><a href="{{url}}">{{name}}</a></div>
-					<div class="span7">{{activity}}</div>
-				</div>
-            {{/opensources.entries}}
-		</div>
-		<div class="section">
-			<div class="section-interest"><h3><i class="fa fa-beer"></i>{{section.interest}}</h3></div>
-            {{#interests}}
-				<div class="row">
-					<div class="span2">{{name}}</div>
-					<div class="span7">{{description}}</div>
-				</div>
-            {{/interests}}
-		</div>
-	</div>
-</div>
-</div></div>
