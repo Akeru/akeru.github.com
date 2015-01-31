@@ -225,7 +225,7 @@ var _meFr = {
     ],
     "educations": [
         {
-            "name": "Haute École de la Province de Liège 'Rennequin Sualem'",
+            "name": "Haute École 'Rennequin Sualem'",
             "startdate": {
                 "year": 2001
             },
@@ -275,7 +275,7 @@ var _meFr = {
             {
                 "name": "jTrains",
                 "url": "http://jtrains.nebuleux.be",
-                "description": "Conception et implémentation d'un outil gratuit, hors ligne planifiant un voyage en train au Japon"
+                "description": "Dévelopement d'un outil gratuit, hors ligne planifiant un voyage en train au Japon"
             },
             {
                 "name": "Tagaini",

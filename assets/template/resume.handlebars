@@ -137,11 +137,8 @@
                         <div class="span2">
                             {{startdate.month}} {{startdate.year}} &mdash; {{enddate.month}} {{enddate.year}} <br/>
                         </div>
-                        <div class="span2">
-                            <b>{{title}}</b>
-                        </div>
-                        <div class="span5 pagination-right text-info">
-                            {{company.name}}
+                        <div class="span7">
+                            <b>{{title}}</b> &mdash; <span class="text-info">{{company.name}}</span>
                         </div>
                     </div>
                     {{#projects}}
@@ -180,26 +177,26 @@
                 <div class="section-education"><h3><i class="fa fa-book"></i>{{section.education}}</h3></div>
                 {{#educations}}
                     <div class="row">
-                        <div class="span7">{{name}}</div>
-                        <div class="span2">{{startdate.year}} &mdash; {{enddate.year}}</div>
+                        <div class="span3">{{name}}</div>
+                        <div class="span3">{{startdate.year}} &mdash; {{enddate.year}}</div>
                     </div>
                 {{/educations}}
             </div>
             <div class="section">
                 <div class="section-language"><h3><i class="fa fa-flag"></i>{{section.language}}</h3></div>
-                <div class="row">
-                    {{#languages}}
-                        <div class="span2 text-info">{{name}}</div>
-                        <div class="span2">{{description}}</div>
-                    {{/languages}}
-                </div>
+                {{#languages}}
+                    <div class="row">
+                        <div class="span3">{{name}}</div>
+                        <div class="span3">{{description}}</div>
+                    </div>
+                {{/languages}}
             </div>
             <div class="section">
                 <div class="section-development"><h3><i class="fa fa-github-alt"></i>{{section.development}}</h3></div>
                 {{#development.entries}}
                     <div class="row">
-                        <div class="span2">{{name}}</div>
-                        <div class="span7">{{description}}</div>
+                        <div class="span3">{{name}}</div>
+                        <div class="span6">{{description}}</div>
                     </div>
                 {{/development.entries}}
             </div>

@@ -64,7 +64,7 @@ var _meEn = {
                 },
                 {
                     "name": "IPAM Project",
-                    "description": "Design and migration from the existing DNS-DHCP infrastructure DNS-DHCP to an IPAM solution"
+                    "description": "Design and migration from the existing DNS-DHCP infrastructure to an IPAM solution"
                 },
                 {
                     "name": "NGFW Project",
@@ -225,7 +225,7 @@ var _meEn = {
     ],
     "educations": [
         {
-            "name": "Haute École de la Province de Liège 'Rennequin Sualem'",
+            "name": "Haute École 'Rennequin Sualem'",
             "startdate": {
                 "year": 2001
             },
@@ -285,7 +285,7 @@ var _meEn = {
             {
                 "name": "KanjiVG",
                 "url": "http://kanjivg.tagaini.net",
-                "description": "Website creation (Github API using JS) - bug report interface creation and data display using JS/SVG"
+                "description": "Website creation - bug report interface creation and data display using JS/SVG"
             }
         ]
     },
