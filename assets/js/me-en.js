@@ -90,11 +90,11 @@ var _meEn = {
             "projects": [
                 {
                     "name": "Day to day",
-                    "description": "Java development, PHP development, Linux servers administration"
+                    "description": "Java development, PHP development, Linux servers administration (email, antispam, backup)"
                 },
                 {
                     "name": "iSeg Project",
-                    "description": "Design and development of a SSL VPN platform tight to the belgian electronic identity card"
+                    "description": "Design and development of an SSL VPN platform using the Belgian electronic identity card"
                 },
                 {
                     "name": "Consultancy",
@@ -120,7 +120,7 @@ var _meEn = {
             "projects": [
                 {
                     "name": "Day to day",
-                    "description": "Level 1 user support, Linux servers administration"
+                    "description": "Level 1 user support, Linux servers administration (email, web, file sharing)"
                 },
                 {
                     "name": "Osiris Project",

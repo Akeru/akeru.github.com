@@ -90,7 +90,7 @@ var _meFr = {
             "projects": [
                 {
                     "name": "Quotiden",
-                    "description": "Dévelopement Java, dévelopement PHP, administration de serveurs Linux"
+                    "description": "Dévelopement Java, dévelopement PHP, administration de serveurs Linux (email, antispam, backup)"
                 },
                 {
                     "name": "Projet iSeg",
@@ -120,7 +120,7 @@ var _meFr = {
             "projects": [
                 {
                     "name": "Quotiden",
-                    "description": "Support utilisateur, administration de serveurs Linux"
+                    "description": "Support utilisateur, administration de serveurs Linux (email, web, partage de fichier)"
                 },
                 {
                     "name": "Projet Osiris",
