@@ -12,8 +12,8 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a id="language-french" href="#">Français</a></li>
                                 <li><a id="language-english" href="#">English</a></li>
+                                <li><a id="language-french" href="#">Français</a></li>
                             </ul>
                         </div>
                     </div>
@@ -22,7 +22,7 @@
 
             <div class="row-fluid">
                 <div class="span12">
-                    <strong>{{section.profile}}</strong>
+                    <strong>{{section.headline}}</strong>
                 </div>
             </div>
 
@@ -58,14 +58,18 @@
                 </div>
             </div>
 
-            <div class="row-fluid">
-                <div class="span1">
-                    <i class="fa fa-map-marker fa-fw"></i>
+            {{#contact.locations}}
+                <div class="row-fluid">
+                    <div class="span1">
+                        {{#if @first}}
+                        <i class="fa fa-map-marker fa-fw"></i>
+                        {{/if}}
+                    </div>
+                    <div class="span11">
+                        <span class="obfuscated encrypted" data-trim="22">{{description}}</span>
+                    </div>
                 </div>
-                <div class="span11">
-                    <span class="obfuscated encrypted" data-trim="22">{{contact.location}}</span>
-                </div>
-            </div>
+            {{/contact.locations}}
 
             <div class="row-fluid">
                 <div class="span12">
@@ -87,8 +91,7 @@
                     <i class="fa fa-gift fa-fw"></i>
                 </div>
                 <div class="span11">
-                    {{bio.birthdate.name}}
-                    <span class="obfuscated encrypted" data-trim="15">{{bio.birthdate.date}}</span>
+                    <span class="obfuscated encrypted" data-trim="15">{{bio.birthdate}}</span>
                 </div>
             </div>
 
@@ -133,11 +136,11 @@
     <div class="span9">
         <div class="mainbar">
             <div class="section">
-                <div class="section-job"><h3><i class="fa fa-briefcase"></i>{{section.job}}</h3></div>
+                <div class="section-job"><h3><i class="fa fa-briefcase hidden-print"></i>{{section.job}}</h3></div>
                 {{#jobs}}
                     <div class="row">
                         <div class="span2">
-                            {{startdate.month}} {{startdate.year}} &mdash; {{enddate.month}} {{enddate.year}} <br/>
+                            <b>{{startdate.month}} {{startdate.year}} &mdash; {{enddate.month}} {{enddate.year}}</b>
                         </div>
                         <div class="span7">
                             <b>{{title}}</b> &mdash; <a href="{{company.url}}">{{company.name}}</a>
@@ -163,7 +166,7 @@
                 {{/jobs}}
             </div>
             <div class="section">
-                <div class="section-skill"><h3><i class="fa fa-dashboard"></i>{{section.skill}}</h3></div>
+                <div class="section-skill"><h3><i class="fa fa-dashboard hidden-print"></i>{{section.skill}}</h3></div>
                 <div class="row">
                     {{#skills}}
                         <div class="span3">
@@ -176,17 +179,17 @@
                 </div>
             </div>
             <div class="section">
-                <div class="section-education"><h3><i class="fa fa-book"></i>{{section.education}}</h3></div>
+                <div class="section-education"><h3><i class="fa fa-book hidden-print"></i>{{section.education}}</h3></div>
                 {{#educations}}
                     <div class="row">
                         <div class="span3">{{name}}</div>
-                        <div class="span3">{{description}}</div>
+                        <div class="span3"><b>{{description}}</b></div>
                         <div class="span3">{{startdate.year}} &mdash; {{enddate.year}}</div>
                     </div>
                 {{/educations}}
             </div>
             <div class="section">
-                <div class="section-language"><h3><i class="fa fa-flag"></i>{{section.language}}</h3></div>
+                <div class="section-language"><h3><i class="fa fa-flag hidden-print"></i>{{section.language}}</h3></div>
                 {{#languages}}
                     <div class="row">
                         <div class="span3">{{name}}</div>
@@ -195,7 +198,7 @@
                 {{/languages}}
             </div>
             <div class="section">
-                <div class="section-development"><h3><i class="fa fa-github-alt"></i>{{section.development}}</h3></div>
+                <div class="section-development"><h3><i class="fa fa-github-alt hidden-print"></i>{{section.development}}</h3></div>
                 {{#development.entries}}
                     <div class="row">
                         <div class="span3"><a href="{{url}}">{{name}}</a></div>
@@ -204,7 +207,7 @@
                 {{/development.entries}}
             </div>
             <div class="section">
-                <div class="section-interest"><h3><i class="fa fa-beer"></i>{{section.interest}}</h3></div>
+                <div class="section-interest"><h3><i class="fa fa-beer hidden-print"></i>{{section.interest}}</h3></div>
                 {{#interests}}
                     <div class="row">
                         <div class="span3">{{name}}</div>

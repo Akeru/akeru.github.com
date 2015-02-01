@@ -2,16 +2,13 @@ var _meEn = {
     "lang": "",
     "bio": {
         "name": "Axel Bodart",
-        "birthdate": {
-            "name": "Born on ",
-            "date": "××××××××××××××××××××××"
-        },
+        "birthdate": "××××××××××××××××××××××",
         "marital": "Married, two children",
         "nationalty": "Belgian",
         "car": "Own vehicule"
     },
     "section": {
-        "profile": "Profile",
+        "headline": "Network / System Engineer",
         "contact": "Contact",
         "misc": "Miscellaneous",
         "job": "Experiences",
@@ -23,13 +20,17 @@ var _meEn = {
     },
     "profiles": [
         {"description": "10 years of experience"},
-        {"description": "High adaptability, independent"},
+        {"description": "Highly adaptable, independent"},
         {"description": "Strong focus on automation"}
     ],
     "contact": {
         "phone": "××××××××××××××××××××××",
         "email": "××××××××××××××××××××××",
-        "location": "××××××××××××××××××××××"
+        "locations": [
+            {"description": "××××××××××××××××××××××"},
+            {"description": "××××××××××××××××××××××"},
+            {"description": "××××××××××××××××××××××"}
+        ]
     },
     "jobs": [
         {
@@ -50,7 +51,7 @@ var _meEn = {
             "projects": [
                 {
                     "name": "Environment",
-                    "description": "40000 network access port, 1800 wireless access points, 13 core routers, 25 branch routers, 35 firewalls, 2 next-generation firewalls, VPN gateways (site to site, client-server), more than 30,000 users"
+                    "description": "40000 network access ports, 1800 wireless access points, 13 core routers, 25 branch routers, 35 firewalls, 2 next-generation firewalls, VPN gateways (site to site, client-server), more than 30,000 users"
                 },
                 {
                     "name": "Day to day",
@@ -126,7 +127,7 @@ var _meEn = {
                 },
                 {
                     "name": "Osiris Project",
-                    "description": "Migrating a NIS based infrastructure to an LDAP one"
+                    "description": "Migrating a NIS based infrastructure to an LDAP one (user accounts, authentication...)"
                 }
             ]
         },

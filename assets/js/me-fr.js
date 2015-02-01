@@ -2,16 +2,13 @@ var _meFr = {
     "lang": "",
     "bio": {
         "name": "Axel Bodart",
-        "birthdate": {
-            "name": "Né le ",
-            "date": "××××××××××××××××××××××"
-        },
+        "birthdate": "××××××××××××××××××××××",
         "marital": "Marié, deux enfants",
         "nationalty": "Belge",
         "car": "Véhicule personnel"
     },
     "section": {
-        "profile": "Profile",
+        "headline": "Administrateur Réseau / Système",
         "contact": "Coordonnées",
         "misc": "Divers",
         "job": "Expériences",
@@ -29,7 +26,11 @@ var _meFr = {
     "contact": {
         "phone": "××××××××××××××××××××××",
         "email": "××××××××××××××××××××××",
-        "location": "××××××××××××××××××××××"
+        "locations": [
+            {"description": "××××××××××××××××××××××"},
+            {"description": "××××××××××××××××××××××"},
+            {"description": "××××××××××××××××××××××"}
+        ]
     },
     "jobs": [
         {
@@ -126,7 +127,7 @@ var _meFr = {
                 },
                 {
                     "name": "Projet Osiris",
-                    "description": "Migration d'une infrastructure NIS vers LDAP"
+                    "description": "Migration d'une infrastructure NIS vers LDAP (comptes utilisateurs, identification...)"
                 }
             ]
         },
