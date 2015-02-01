@@ -11,6 +11,7 @@ var _meFr = {
         "car": "Véhicule personnel"
     },
     "section": {
+        "profile": "Profile",
         "contact": "Coordonnées",
         "misc": "Divers",
         "job": "Expériences",
@@ -20,10 +21,11 @@ var _meFr = {
         "development": "Dévelopement",
         "interest": "Loisirs"
     },
-    "profile": {
-        "name": "Analyste programmeur",
-        "tag": "Réseau | Système | Développement"
-    },
+    "profiles": [
+        {"description": "10 ans d'expérience"},
+        {"description": "Adaptable et indépendant"},
+        {"description": "Forte capacité d'automatisation"}
+    ],
     "contact": {
         "phone": "××××××××××××××××××××××",
         "email": "××××××××××××××××××××××",
@@ -60,7 +62,7 @@ var _meFr = {
                 },
                 {
                     "name": "Projet Plugs 2",
-                    "description": "Etude et conception d'une plateforme de gestion du réseau (automatisation, collecte et affichage de données...)"
+                    "description": "Etude et conception d'une plateforme de gestion du réseau (automatisation, collecte et affichage...)"
                 },
                 {
                     "name": "Projet IPAM",
@@ -103,7 +105,7 @@ var _meFr = {
             ]
         },
         {
-            "title": "Administrateur systèmes",
+            "title": "Administrateur système",
             "company": {
                 "name": "Université de Liège - Institut Montefiore",
                 "url": "http://www.montefiore.ulg.ac.be",
@@ -131,7 +133,7 @@ var _meFr = {
         {
             "title": "Stagiaire",
             "company": {
-                "name": "Swissforex AG - Zuerich",
+                "name": "Swissforex AG - Zurich - Suisse",
                 "url": "#",
                 "logo": "empty"
             },
@@ -165,7 +167,7 @@ var _meFr = {
                     "name": "Routage (IPv4, IPv6)"
                 },
                 {
-                    "name": "Palo Alto Networks"
+                    "name": "Firewall (Palo Alto, Fortinet, CheckPoint)"
                 },
                 {
                     "name": "Juniper SSL VPN (+ eID)"
@@ -179,7 +181,7 @@ var _meFr = {
             "name": "Système",
             "entries": [
                 {
-                    "name": "OS X, Linux"
+                    "name": "OS X, Linux (Debian, CentOS)"
                 },
                 {
                     "name": "DNS, DHCP (ISC, Infoblox)"
@@ -226,6 +228,7 @@ var _meFr = {
     "educations": [
         {
             "name": "Haute École 'Rennequin Sualem'",
+            "description": "Bachelier en informatique et systèmes",
             "startdate": {
                 "year": 2001
             },
@@ -235,6 +238,7 @@ var _meFr = {
         },
         {
             "name": "Université de Liège",
+            "description": "",
             "startdate": {
                 "year": 1999
             },
@@ -244,6 +248,7 @@ var _meFr = {
         },
         {
             "name": "Athénée Royal de Chênée",
+            "description": "Enseignement secondaire supérieur",
             "startdate": {
                 "year": 1993
             },
@@ -259,7 +264,7 @@ var _meFr = {
         },
         {
             "name": "Anglais",
-            "description": "Parlé couramment"
+            "description": "Lu, parlé, ecrit couramment"
         },
         {
             "name": "Allemand",

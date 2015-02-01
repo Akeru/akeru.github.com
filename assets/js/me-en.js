@@ -11,19 +11,21 @@ var _meEn = {
         "car": "Own vehicule"
     },
     "section": {
+        "profile": "Profile",
         "contact": "Contact",
         "misc": "Miscellaneous",
-        "job": "Jobs",
+        "job": "Experiences",
         "skill": "Skills",
         "education": "Education",
         "language": "Languages",
         "development": "Development",
         "interest": "Interests"
     },
-    "profile": {
-        "name": "Analyste programmeur",
-        "tag": "Network | System | Development"
-    },
+    "profiles": [
+        {"description": "10 years of experience"},
+        {"description": "High adaptability, independent"},
+        {"description": "Strong focus on automation"}
+    ],
     "contact": {
         "phone": "××××××××××××××××××××××",
         "email": "××××××××××××××××××××××",
@@ -131,7 +133,7 @@ var _meEn = {
         {
             "title": "Trainee",
             "company": {
-                "name": "Swissforex AG - Zuerich",
+                "name": "Swissforex AG - Zurich - Switzerland",
                 "url": "#",
                 "logo": "empty"
             },
@@ -165,7 +167,7 @@ var _meEn = {
                     "name": "Routing (IPv4, IPv6)"
                 },
                 {
-                    "name": "Palo Alto Networks"
+                    "name": "Firewall (Palo Alto, Fortinet, CheckPoint)"
                 },
                 {
                     "name": "Juniper SSL VPN (+ eID)"
@@ -179,7 +181,7 @@ var _meEn = {
             "name": "System",
             "entries": [
                 {
-                    "name": "OS X, Linux"
+                    "name": "OS X, Linux (Debian, CentOS)"
                 },
                 {
                     "name": "DNS, DHCP (ISC, Infoblox)"
@@ -226,6 +228,7 @@ var _meEn = {
     "educations": [
         {
             "name": "Haute École 'Rennequin Sualem'",
+            "description": "Bachelor degree in computer science",
             "startdate": {
                 "year": 2001
             },
@@ -235,6 +238,7 @@ var _meEn = {
         },
         {
             "name": "Liège University",
+            "description": "",
             "startdate": {
                 "year": 1999
             },
@@ -244,6 +248,7 @@ var _meEn = {
         },
         {
             "name": "Athénée Royal de Chênée",
+            "description": "High school degree",
             "startdate": {
                 "year": 1993
             },
@@ -259,7 +264,7 @@ var _meEn = {
         },
         {
             "name": "English",
-            "description": "Professional proficiency"
+            "description": "Full professional proficiency"
         },
         {
             "name": "German",
@@ -280,7 +285,7 @@ var _meEn = {
             {
                 "name": "Tagaini",
                 "url": "http://tagaini.net",
-                "description": "Website creation - build, package generation et OS X specific bug fixes"
+                "description": "Website creation - build, package generation and OS X specific bug fixes"
             },
             {
                 "name": "KanjiVG",
