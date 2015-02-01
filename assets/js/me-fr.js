@@ -18,19 +18,11 @@ var _meFr = {
         "development": "Dévelopement",
         "interest": "Loisirs"
     },
-    "profiles": [
-        {"description": "10 ans d'expérience"},
-        {"description": "Adaptable et indépendant"},
-        {"description": "Forte capacité d'automatisation"}
-    ],
+    "profile": "10 ans d'expérience <br/> Adaptable et indépendant <br/> Forte capacité d'automatisation",
     "contact": {
         "phone": "××××××××××××××××××××××",
         "email": "××××××××××××××××××××××",
-        "locations": [
-            {"description": "××××××××××××××××××××××"},
-            {"description": "××××××××××××××××××××××"},
-            {"description": "××××××××××××××××××××××"}
-        ]
+        "location": "××××××××××××××××××××××<br/>××××××××××××××××××××××<br/>××××××××××××××××××××××"
     },
     "jobs": [
         {

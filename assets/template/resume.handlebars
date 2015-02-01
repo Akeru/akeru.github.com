@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" xmlns="http://www.w3.org/1999/html">
     <div class="span3">
         <div class="sidebar-content">
             <div class="row-fluid">
@@ -22,17 +22,21 @@
 
             <div class="row-fluid">
                 <div class="span12">
-                    <strong>{{section.headline}}</strong>
+                    <h4>{{section.headline}}</h4>
                 </div>
             </div>
 
-            {{#profiles}}
-                <div class="row-fluid">
-                    <div class="span12">
-                        {{description}}
-                    </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    {{{profile}}}
                 </div>
-            {{/profiles}}
+            </div>
+
+            <div class="row-fluid">
+                <div class="span12">
+                    &nbsp;
+                </div>
+            </div>
 
             <div class="row-fluid">
                 <div class="span12">
@@ -58,18 +62,20 @@
                 </div>
             </div>
 
-            {{#contact.locations}}
-                <div class="row-fluid">
-                    <div class="span1">
-                        {{#if @first}}
-                        <i class="fa fa-map-marker fa-fw"></i>
-                        {{/if}}
-                    </div>
-                    <div class="span11">
-                        <span class="obfuscated encrypted" data-trim="22">{{description}}</span>
-                    </div>
+            <div class="row-fluid">
+                <div class="span1">
+                    <i class="fa fa-map-marker fa-fw"></i>
                 </div>
-            {{/contact.locations}}
+                <div class="span11">
+                    <span class="obfuscated encrypted" data-trim="22">{{{contact.location}}}</span>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span12">
+                    &nbsp;
+                </div>
+            </div>
 
             <div class="row-fluid">
                 <div class="span12">
@@ -179,7 +185,8 @@
                 </div>
             </div>
             <div class="section">
-                <div class="section-education"><h3><i class="fa fa-book hidden-print"></i>{{section.education}}</h3></div>
+                <div class="section-education"><h3><i class="fa fa-book hidden-print"></i>{{section.education}}</h3>
+                </div>
                 {{#educations}}
                     <div class="row">
                         <div class="span3">{{name}}</div>
@@ -198,7 +205,8 @@
                 {{/languages}}
             </div>
             <div class="section">
-                <div class="section-development"><h3><i class="fa fa-github-alt hidden-print"></i>{{section.development}}</h3></div>
+                <div class="section-development"><h3>
+                    <i class="fa fa-github-alt hidden-print"></i>{{section.development}}</h3></div>
                 {{#development.entries}}
                     <div class="row">
                         <div class="span3"><a href="{{url}}">{{name}}</a></div>

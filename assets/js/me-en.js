@@ -18,19 +18,11 @@ var _meEn = {
         "development": "Development",
         "interest": "Interests"
     },
-    "profiles": [
-        {"description": "10 years of experience"},
-        {"description": "Highly adaptable, independent"},
-        {"description": "Strong focus on automation"}
-    ],
+    "profile": "10 years of experience <br/> Highly adaptable, independent <br/> Strong focus on automation",
     "contact": {
         "phone": "××××××××××××××××××××××",
         "email": "××××××××××××××××××××××",
-        "locations": [
-            {"description": "××××××××××××××××××××××"},
-            {"description": "××××××××××××××××××××××"},
-            {"description": "××××××××××××××××××××××"}
-        ]
+        "location": "××××××××××××××××××××××<br/>××××××××××××××××××××××<br/>××××××××××××××××××××××"
     },
     "jobs": [
         {
