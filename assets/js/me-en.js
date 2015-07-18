@@ -231,7 +231,7 @@ var _meEn = {
         },
         {
             "name": "Liège University",
-            "description": "",
+            "description": "—",
             "startdate": {
                 "year": 1999
             },

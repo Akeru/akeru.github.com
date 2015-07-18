@@ -231,7 +231,7 @@ var _meFr = {
         },
         {
             "name": "Université de Liège",
-            "description": "",
+            "description": "—",
             "startdate": {
                 "year": 1999
             },
