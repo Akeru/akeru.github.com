@@ -151,7 +151,7 @@ var _meFr = {
             "name": "Réseau",
             "entries": [
                 {
-                    "name": "Cisco (IOS, FWSM, ASA, NXOS, CatOS)"
+                    "name": "Cisco (IOS, FWSM, ASA, NXOS)"
                 },
                 {
                     "name": "Switching (Sécurité, IPv6, VoIP, VoWL)"
@@ -160,7 +160,7 @@ var _meFr = {
                     "name": "Routage (IPv4, IPv6)"
                 },
                 {
-                    "name": "Firewall (Palo Alto, Fortinet, CheckPoint)"
+                    "name": "Firewall (Palo Alto, CheckPoint)"
                 },
                 {
                     "name": "Juniper SSL VPN (+ eID)"
@@ -203,7 +203,7 @@ var _meFr = {
                     "name": "SQL (PostgreSQL, MySQL, SQLite)"
                 },
                 {
-                    "name": "Web (HTML, CSS, LESS, JS, ExtJS, AJAX)"
+                    "name": "Web (HTML, CSS, JS, ExtJS, AJAX)"
                 },
                 {
                     "name": "Java (J2SE, J2EE, Android)"
@@ -212,7 +212,7 @@ var _meFr = {
                     "name": "Gestion de versions (Git, SVN)"
                 },
                 {
-                    "name": "Intégration continue (TeamCity, JUnit)"
+                    "name": "TDD (TeamCity, JUnit)"
                 }
             ]
         }

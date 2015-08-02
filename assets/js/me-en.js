@@ -151,7 +151,7 @@ var _meEn = {
             "name": "Network",
             "entries": [
                 {
-                    "name": "Cisco (IOS, FWSM, ASA, NXOS, CatOS)"
+                    "name": "Cisco (IOS, FWSM, ASA, NXOS)"
                 },
                 {
                     "name": "Switching (Security, IPv6, VoIP, VoWL)"
@@ -160,7 +160,7 @@ var _meEn = {
                     "name": "Routing (IPv4, IPv6)"
                 },
                 {
-                    "name": "Firewall (Palo Alto, Fortinet, CheckPoint)"
+                    "name": "Firewall (Palo Alto, CheckPoint)"
                 },
                 {
                     "name": "Juniper SSL VPN (+ eID)"
@@ -203,7 +203,7 @@ var _meEn = {
                     "name": "SQL (PostgreSQL, MySQL, SQLite)"
                 },
                 {
-                    "name": "Web (HTML, CSS, LESS, JS, ExtJS, AJAX)"
+                    "name": "Web (HTML, CSS, JS, ExtJS, AJAX)"
                 },
                 {
                     "name": "Java (J2SE, J2EE, Android)"
@@ -212,7 +212,7 @@ var _meEn = {
                     "name": "Source version control (Git, SVN)"
                 },
                 {
-                    "name": "Continuous integration (TeamCity, JUnit)"
+                    "name": "TDD (TeamCity, JUnit)"
                 }
             ]
         }
